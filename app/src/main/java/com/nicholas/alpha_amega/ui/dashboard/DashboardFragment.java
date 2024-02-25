@@ -4,6 +4,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -125,6 +126,38 @@ public class DashboardFragment extends Fragment {
 
         textView.setText(text);
 
+        String notification = "";
+        switch (preferences.getString("lang", "en")){
+            case "ru":
+                notification = "Категория \"" + book + "\" была";
+                if (isChecked) {
+                    notification += " добавлена в список";
+                } else {
+                    notification += " исключена из списка";
+                }
+                break;
+            case "ro":
+                notification = "Categoria \"" + book + "\"era";
+                if (isChecked) {
+                    notification += " adaugata in list";
+                } else {
+                    notification += " scoasa din list";
+                }
+                break;
+            case "en":
+                notification = "Category  \"" + book + "\" has been";
+                if (isChecked) {
+                    notification += " added to list";
+                } else {
+                    notification += " removed from list";
+                }
+                break;
 
+        }
+        Toast toast = Toast.makeText(getContext(), notification, Toast.LENGTH_LONG);
+
+        toast.show();
+
+        new Handler().postDelayed(()->toast.cancel(), 800);
     }
 }

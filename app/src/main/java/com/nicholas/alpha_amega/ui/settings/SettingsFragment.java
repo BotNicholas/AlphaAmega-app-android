@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.os.LocaleList;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,8 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 import com.nicholas.alpha_amega.MainActivity;
 import com.nicholas.alpha_amega.R;
 import com.nicholas.alpha_amega.databinding.FragmentHomeBinding;
@@ -51,6 +54,7 @@ public class SettingsFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        System.out.println("CREAAAAAAAAAAAAAAAAAAAAAAAAAAAAATE");
         super.onViewCreated(view, savedInstanceState);
 
         preferences = getActivity().getSharedPreferences("preferences", MODE_PRIVATE);
@@ -58,7 +62,9 @@ public class SettingsFragment extends Fragment {
         MainActivity activity = (MainActivity) getActivity();
 
         Button button = view.findViewById(R.id.change_theme);
-        button.setOnClickListener(v -> activity.changeTheme());
+        button.setOnClickListener(v -> {
+            activity.changeTheme();
+        });
 
         Spinner spinner = view.findViewById(R.id.languages);
 
@@ -67,6 +73,8 @@ public class SettingsFragment extends Fragment {
 //        adapter.setDropDownViewTheme();
 
         spinner.setAdapter(adapter);
+
+        System.out.println(preferences.getString("lang", "AAAAAAAAAAAAAAAA"));
 
         switch (preferences.getString("lang", "en")){
             case "ru":
@@ -84,8 +92,20 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedLang = parent.getItemAtPosition(position).toString();
-//
-                activity.changeLanguage(selectedLang);
+
+                String prevLang = getFullLang(preferences.getString("lang", "en")); //getting old one
+                String lang = activity.changeLanguage(selectedLang); //setting new one
+
+//                System.out.println(isFirstSelection);
+                if (!prevLang.equals(lang)) {
+                    Snackbar snackbar = Snackbar.make(binding.languages, "Current language is " + lang, BaseTransientBottomBar.LENGTH_SHORT);
+                    snackbar.setAction("ok", v -> {
+                    });
+                    snackbar.show();
+                }
+//                else {
+//                    updateFirstEntranceState(false);
+//                }
             }
 
             @Override
@@ -97,7 +117,21 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+//        System.out.println("DESTROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOY");
+//        updateFirstEntranceState(true);
         binding = null;
+    }
+
+    private String getFullLang(String lang){
+        switch (lang) {
+            case "ru":
+                return "Russian";
+            case "ro":
+                return "Romanian";
+            case "en":
+                return "English";
+        }
+        return "English";
     }
 
 }

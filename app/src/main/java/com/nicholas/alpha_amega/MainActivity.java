@@ -2,6 +2,7 @@ package com.nicholas.alpha_amega;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -12,6 +13,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 import com.nicholas.alpha_amega.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,11 +59,13 @@ public class MainActivity extends AppCompatActivity {
         useDarkTheme = !useDarkTheme;
         editor.putBoolean("DarkTheme", useDarkTheme);
         editor.apply();
+//        Snackbar.make(binding.container, "Theme has been changed to ", BaseTransientBottomBar.LENGTH_SHORT).show();
+//        new Handler().postDelayed(()->recreate(), 1000);
         recreate();
     }
 
-    public void changeLanguage(String lang){
-        System.out.println(lang);
+    public String changeLanguage(String lang){
+//        System.out.println(lang);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         switch (lang) {
             case "Russian":
@@ -75,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         }
         editor.apply();
 //        recreate();
+
+        return lang;
     }
 
 }
