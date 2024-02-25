@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/text_settings"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="55dp"-->
+    <!--        android:fontFamily="casual"-->
+    <!--        android:text="Settings:"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textSize="20sp" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/change_theme"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_button"
+            android:text="Change Theme" />
+
+        <Spinner
+            android:id="@+id/languages"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="?colorPrimary"
+            android:clickable="false" />
+    </LinearLayout>
+
+</FrameLayout>

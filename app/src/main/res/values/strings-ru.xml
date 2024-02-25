@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_home_ru">Домой</string>
+    <string name="title_dashboard_ru">Доска</string>
+    <string name="title_notifications_ru">Уведомления</string>
+    <string name="title_settings_ru">Настройки</string>
+
+
+    <string name="text_home_ru">Домашний раздел</string>
+    <string name="text_dashboard_ru">Раздел Доска</string>
+    <string name="text_notifications_ru">Ваши Уведомления</string>
+    <string name="text_settings_ru">Настройки</string>
+
+
+    <string name="text_books_title_ru">Выбрано:</string>
+    <string name="text_books_kids_ru">Книги для детей</string>
+    <string name="text_books_adults_ru">Книги для взрослых</string>
+    <string name="text_books_fiction_ru">Книги фантастика</string>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+<!--    <solid android:color="?android:attr/windowBackground"/> &lt;!&ndash; Вы можете изменить этот цвет на нужный вам &ndash;&gt;-->
+    <solid android:color="?colorPrimary"/> <!-- Вы можете изменить этот цвет на нужный вам -->
+    <corners android:radius="16dp"/> <!-- Здесь задаётся радиус скругления -->
+</shape>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#FF9800</color>
+<!--    <color name="colorPrimaryDark">#FF2600</color>-->
+    <color name="colorPrimaryLightMode">#BE1C00</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorBackgroundDark">#121212</color>
+
+
+    <color name="brown">#7D0000</color>
+    <color name="brown_light">#C33232</color>
+    <color name="colorInactive">#FF9E9E9E</color> <!-- серый цвет для неактивных элементов -->
+    <color name="bottom_navigation_background_light">#EAEAEA</color>
+    <color name="bottom_navigation_background_dark">#202020</color>
+
+    <color name="colorItemSelectedRipple">#FFA500</color> <!-- Цвет рипл-эффекта для выбранного элемента -->
+    <color name="colorItemSelectedBackground">#50FFA500</color> <!-- Цвет фона для выбранного элемента с некоторой прозрачностью -->
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_home_ro">Acassa</string>
+    <string name="title_dashboard_ro">Tablou</string>
+    <string name="title_notifications_ro">Notificari</string>
+    <string name="title_settings_ro">Setari</string>
+
+
+    <string name="text_home_ro">Pagina de casa</string>
+    <string name="text_dashboard_ro">Tabloul</string>
+    <string name="text_notifications_ro">Notificari tai</string>
+    <string name="text_settings_ro">Setari</string>
+
+
+    <string name="text_books_title_ro">Selectat:</string>
+    <string name="text_books_kids_ro">Carti pentu copii</string>
+    <string name="text_books_adults_ro">Carti pentu adulti</string>
+    <string name="text_books_fiction_ro">Carti fictie</string>
+
+</resources>

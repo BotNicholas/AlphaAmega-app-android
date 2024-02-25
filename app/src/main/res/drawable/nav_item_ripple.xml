@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <ripple android:color="?colorPrimary" android:exitFadeDuration="1000"> <!-- Используйте атрибут темы для согласования цветов -->
+            <item android:drawable="?android:attr/windowBackground"/> <!-- Используйте цвет фона меню из темы -->
+        </ripple>
+    </item>
+    <item>
+<!--        <color android:color="@android:color/transparent"/>-->
+        <color android:color="?android:attr/windowBackground"/>
+    </item>
+</selector>
