@@ -74,7 +74,7 @@ public class SettingsFragment extends Fragment {
 
         spinner.setAdapter(adapter);
 
-        System.out.println(preferences.getString("lang", "AAAAAAAAAAAAAAAA"));
+//        System.out.println(preferences.getString("lang", "AAAAAAAAAAAAAAAA"));
 
         switch (preferences.getString("lang", "en")){
             case "ru":
