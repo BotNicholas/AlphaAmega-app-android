@@ -69,28 +69,28 @@ public class HomeFragment extends Fragment {
         ArrayList<ListItem> items = new ArrayList<>();
 
         //...заполнение
-        items.add(new ListItem(R.drawable.cowbell, "COWBELL WARRIOR"));
-        items.add(new ListItem(R.drawable.toad, "THINK OF A DRIVE"));
-        items.add(new ListItem(R.drawable.vendetta, "Vendetta"));
-        items.add(new ListItem(R.drawable.lad, "Live Another Day"));
-        items.add(new ListItem(R.drawable.dis, "DEMONS IN MY SOUL"));
-        items.add(new ListItem(R.mipmap.icon, "9mm"));
-        items.add(new ListItem(R.drawable.mm, "METAMORPHOSIS"));
-        items.add(new ListItem(R.drawable.fu, "Fed Up"));
-        items.add(new ListItem(R.drawable.wn, "Why Not"));
-        items.add(new ListItem(R.drawable.teq, "Tequila"));
-        items.add(new ListItem(R.drawable.nb, "NEON BLADE"));
-        items.add(new ListItem(R.drawable.awm, "Always Want Me"));
-        items.add(new ListItem(R.drawable.rukm, "RUKIDDINGME"));
-        items.add(new ListItem(R.drawable.scopin, "SCOPIN"));
-        items.add(new ListItem(R.drawable.kftns, "Killers From The Northside"));
-        items.add(new ListItem(R.drawable.calmness, "CALMNESS"));
-        items.add(new ListItem(R.drawable.limbo, "Limbo"));
-        items.add(new ListItem(R.drawable.cristals, "Crystals"));
-        items.add(new ListItem(R.drawable.ci, "Close Eyes"));
-        items.add(new ListItem(R.drawable.saharah, "Sahara"));
-        items.add(new ListItem(R.drawable.demice, "Demice"));
-        items.add(new ListItem(R.drawable.disaster, "Disaster"));
+        items.add(new ListItem(R.drawable.cowbell, "COWBELL WARRIOR", "https://www.youtube.com/watch?v=FHWgDichnMo"));
+        items.add(new ListItem(R.drawable.toad, "THINK OF A DRIVE", "https://www.youtube.com/watch?v=LiovUkBWOos"));
+        items.add(new ListItem(R.drawable.vendetta, "Vendetta", "https://www.youtube.com/watch?v=Y8qPp4pBNz8"));
+        items.add(new ListItem(R.drawable.lad, "Live Another Day", "https://www.youtube.com/watch?v=7pmUQJ5KAlU"));
+        items.add(new ListItem(R.drawable.dis, "DEMONS IN MY SOUL", "https://www.youtube.com/watch?v=jvENNPVz6s4"));
+        items.add(new ListItem(R.mipmap.icon, "9mm", "https://www.youtube.com/watch?v=ArNiVyd7skk"));
+        items.add(new ListItem(R.drawable.mm, "METAMORPHOSIS", "https://www.youtube.com/watch?v=317RHaFF7Xk"));
+        items.add(new ListItem(R.drawable.fu, "Fed Up", "https://www.youtube.com/watch?v=DKLuL1IE2PA"));
+        items.add(new ListItem(R.drawable.wn, "Why Not", "https://www.youtube.com/watch?v=Hh5jEQraXaw"));
+        items.add(new ListItem(R.drawable.teq, "Tequila", "https://www.youtube.com/watch?v=DO-8K1AzoXc"));
+        items.add(new ListItem(R.drawable.nb, "NEON BLADE", "https://www.youtube.com/watch?v=dvQJIgjlR3I"));
+        items.add(new ListItem(R.drawable.awm, "Always Want Me", "https://www.youtube.com/watch?v=VJGwqhtMvnU"));
+        items.add(new ListItem(R.drawable.rukm, "RUKIDDINGME", "https://www.youtube.com/watch?v=E4DhSl3-vmc"));
+        items.add(new ListItem(R.drawable.scopin, "SCOPIN", "https://www.youtube.com/watch?v=VXaq77GiyEo"));
+        items.add(new ListItem(R.drawable.kftns, "Killers From The Northside", "https://www.youtube.com/watch?v=DK6IRG4CAbw"));
+        items.add(new ListItem(R.drawable.calmness, "CALMNESS", "https://www.youtube.com/watch?v=bAhTfoMVbwI"));
+        items.add(new ListItem(R.drawable.limbo, "Limbo", "https://www.youtube.com/watch?v=GDeZetYSAzo"));
+        items.add(new ListItem(R.drawable.cristals, "Crystals", "https://www.youtube.com/watch?v=Ov6ymmqp27s"));
+        items.add(new ListItem(R.drawable.ci, "Close Eyes", "https://www.youtube.com/watch?v=ao4RCon11eY"));
+        items.add(new ListItem(R.drawable.saharah, "Sahara", "https://www.youtube.com/watch?v=pIZ0QRWK0zg"));
+        items.add(new ListItem(R.drawable.demice, "Demice", "https://www.youtube.com/watch?v=mUeOEhisJso"));
+        items.add(new ListItem(R.drawable.disaster, "Disaster", "https://www.youtube.com/watch?v=q1sKU-cpUDk"));
 
         ListAdapter adapter = new ListAdapter(getContext(), items);
 

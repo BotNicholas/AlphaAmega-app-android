@@ -1,6 +1,7 @@
 package models;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -39,7 +40,20 @@ public class ListAdapter extends ArrayAdapter<ListItem> {
         imageView.setImageResource(item.getImageResource());
         textView.setText(item.getText());
 
+//also here we must add listeners
+        convertView.setOnLongClickListener(v -> {
+            ListItem listItem = getItem(position);
+//            System.out.println(listItem.getText());
 
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            String text = "Hey!\nHave you heard about the song \"" + listItem.getText() + "\"?\nJust listen it here " + listItem.getLink();
+            intent.putExtra(Intent.EXTRA_TEXT, text);
+
+            getContext().startActivity(Intent.createChooser(intent, "Share via"));
+
+            return true;
+        });
 
         return convertView;
     }
